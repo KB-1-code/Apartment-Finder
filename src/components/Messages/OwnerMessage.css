@@ -1,0 +1,238 @@
+.message-page {
+
+  max-width:1100px;
+
+  margin:40px auto;
+
+  padding:20px;
+
+}
+
+
+
+.message-page h2 {
+
+  color:#0b1f3a;
+
+  margin-bottom:25px;
+
+}
+
+
+
+.chat-layout {
+
+  display:flex;
+
+  gap:20px;
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+
+.chat-list {
+
+  width:250px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+
+}
+
+
+
+.chat-user {
+
+  background:#0088ea;
+
+  color:white;
+
+  border:none;
+
+  padding:15px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  text-align:left;
+
+  font-weight:bold;
+
+}
+
+
+
+.chat-user:hover {
+
+  background:#0b1f3a;
+
+}
+
+
+
+.chat-box {
+
+  flex:1;
+
+  min-height:450px;
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+
+
+.chat-box h3 {
+
+  color:#0b1f3a;
+
+  margin-bottom:15px;
+
+}
+
+
+
+.messages {
+
+  flex:1;
+
+  overflow-y:auto;
+
+  background:#f4f7fb;
+
+  border-radius:15px;
+
+  padding:15px;
+
+}
+
+
+
+.owner-message,
+.tenant-message {
+
+  padding:10px 15px;
+
+  margin-bottom:10px;
+
+  border-radius:15px;
+
+  max-width:70%;
+
+}
+
+
+
+.owner-message {
+
+  background:#0088ea;
+
+  color:white;
+
+  margin-left:auto;
+
+}
+
+
+
+.tenant-message {
+
+  background:#ddd;
+
+  color:black;
+
+  margin-right:auto;
+
+}
+
+
+
+.message-input {
+
+  display:flex;
+
+  gap:10px;
+
+  margin-top:15px;
+
+}
+
+
+
+.message-input input {
+
+  flex:1;
+
+  padding:12px;
+
+  border-radius:20px;
+
+  border:1px solid #ccc;
+
+  outline:none;
+
+}
+
+
+
+.message-input button {
+
+  background:#0b1f3a;
+
+  color:white;
+
+  border:none;
+
+  padding:12px 25px;
+
+  border-radius:20px;
+
+  cursor:pointer;
+
+  font-weight:bold;
+
+}
+
+
+
+.message-input button:hover {
+
+  background:#0088ea;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+  .chat-layout {
+
+    flex-direction:column;
+
+  }
+
+
+
+  .chat-list {
+
+    width:100%;
+
+  }
+
+
+}
