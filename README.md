@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# Apartment Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Project Overview
 
-## Available Scripts
+Apartment Finder is a web-based property management and apartment discovery system developed using React.js.
 
-In the project directory, you can run:
+The system is designed to connect property owners with potential tenants. Property owners can create and manage property listings, while tenants can browse available properties, select properties they are interested in, and communicate with property owners.
 
-### `npm start`
+The application provides separate functionality for two types of users:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Property Owners
+- Tenants
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 2. Main Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Authentication
 
-### `npm run build`
+- User registration
+- User login
+- Password authentication
+- Role selection during registration
+- Owner and tenant account types
+- Session-based login state
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Property Owner Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Owner dashboard
+- Create property listings
+- Add property name, image, rooms, price, and description
+- View created properties
+- Delete property listings
+- View properties selected by tenants
+- Communicate with tenants
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tenant Features
 
-### `npm run eject`
+- Tenant dashboard
+- View available properties
+- View property details
+- Select properties
+- View selected properties
+- Remove selected properties
+- View property owners
+- Communicate with property owners
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Other Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Interactive apartment location map
+- About page
+- Responsive navigation sidebar
+- Owner and tenant navigation menus
+- Local storage for application data
+- Session storage for current user information
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 3. Technologies Used
 
-## Learn More
+The project uses the following technologies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+- React Icons
+- React Leaflet
+- Leaflet
+- Browser Local Storage
+- Browser Session Storage
+- Git
+- GitHub
+- Visual Studio Code
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 4. Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+card-component-v1/
+│
+├── public/
+│
+├── src/
+│   │
+│   ├── components/
+│   │   ├── Messages/
+│   │   │   ├── OwnerMessage.js
+│   │   │   ├── OwnerMessage.css
+│   │   │   ├── TenantMessage.js
+│   │   │   └── TenantMessage.css
+│   │   │
+│   │   ├── SignupAndLogin/
+│   │   │   ├── LoginPage.js
+│   │   │   └── SignupPage.js
+│   │   │
+│   │   ├── sidebars/
+│   │   │   ├── OwnerSidebarData.js
+│   │   │   └── TenantSidebarData.js
+│   │   │
+│   │   ├── CardMaker.js
+│   │   ├── CardMaker.css
+│   │   ├── Navbar.js
+│   │   ├── Navbar.css
+│   │   ├── TenantCard.js
+│   │   ├── TenantCard.css
+│   │   ├── TenantView.js
+│   │   └── TenantView.css
+│   │
+│   ├── HomeAndAbout/
+│   │   ├── Home.js
+│   │   ├── Home.css
+│   │   ├── TenantHome.js
+│   │   ├── TenantHome.css
+│   │   ├── About.js
+│   │   ├── About.css
+│   │   ├── Map.js
+│   │   └── Map.css
+│   │
+│   ├── App.js
+│   ├── index.js
+│   └── index.css
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
