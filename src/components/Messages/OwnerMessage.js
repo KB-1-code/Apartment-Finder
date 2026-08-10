@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./OwnerMessage.css";
 
 
@@ -57,29 +57,17 @@ function OwnerMessage() {
 
 
 
-  const getChatKey = (tenantEmail)=>{
-
-
-    return (
-
-      "chat_" +
-
-      [
-
-        currentUser.email,
-
-        tenantEmail
-
-      ]
-
+const getChatKey = useCallback((tenantEmail) => {
+  return (
+    "chat_" +
+    [
+      currentUser.email,
+      tenantEmail
+    ]
       .sort()
-
       .join("_")
-
-    );
-
-
-  };
+  );
+}, [currentUser.email]);
 
 
 
@@ -115,7 +103,7 @@ function OwnerMessage() {
 
 
 
-  },[selectedTenant]);
+  },[getChatKey,selectedTenant]);
 
 
 
@@ -181,7 +169,7 @@ function OwnerMessage() {
     };
 
 
-  },[selectedTenant]);
+  },[getChatKey, selectedTenant]);
 
 
 

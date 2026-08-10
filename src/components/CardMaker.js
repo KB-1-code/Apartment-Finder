@@ -3,8 +3,7 @@ import "./CardMaker.css";
 
 function CardMaker({ cards, onCreate, onDelete }) {
 
-  const currentUser =
-    JSON.parse(sessionStorage.getItem("currentUser"));
+  //const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
 
 
   const [name, setName] = useState("");

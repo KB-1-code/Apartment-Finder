@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./TenantMessage.css";
 
 
@@ -62,29 +62,17 @@ const [message,setMessage]=useState("");
 
 
 
-const getChatKey=(ownerEmail)=>{
-
-
-return (
-
-"chat_" +
-
-[
-
-ownerEmail,
-
-currentUser.email
-
-]
-
-.sort()
-
-.join("_")
-
-);
-
-
-};
+const getChatKey = useCallback((ownerEmail) => {
+  return (
+    "chat_" +
+    [
+      ownerEmail,
+      currentUser.email
+    ]
+      .sort()
+      .join("_")
+  );
+}, [currentUser.email]);
 
 
 
@@ -121,7 +109,7 @@ setMessages(saved);
 
 
 
-},[selectedOwner]);
+},[getChatKey, selectedOwner]);
 
 
 
@@ -189,7 +177,7 @@ syncMessages
 
 
 
-},[selectedOwner]);
+},[getChatKey, selectedOwner]);
 
 
 
